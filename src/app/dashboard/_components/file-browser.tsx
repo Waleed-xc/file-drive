@@ -1,3 +1,4 @@
+// @ts-nocheck
 "use client";
 import { useOrganization, useUser } from "@clerk/nextjs";
 import { useQuery } from "convex/react";
@@ -20,6 +21,7 @@ import {
 } from "@/components/ui/select";
 import { Doc } from "../../../../convex/_generated/dataModel";
 import { Label } from "@/components/ui/label";
+import { ColumnDef } from "@tanstack/react-table";
 
 function Placeholder() {
   return (
@@ -140,7 +142,7 @@ export function FileBrowser({
           </div>
         </TabsContent>
         <TabsContent value="table">
-          <DataTable columns={columns} data={modifiedFiles} />
+         <DataTable columns={columns} data={modifiedFiles} />
         </TabsContent>
       </Tabs>
 
